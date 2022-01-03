@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+ <head>
+         <title>Subsribe Validation</title>
+         <meta charset="UTF-8">
+         <meta name="viewport" content="width=device-width, initial-scale=1">
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+       <script>
+       function validateform(){  
+       var name = document.forms["form"]["name"];
+       var email = document.forms["form"]["email"];  
+       var Pass = document.forms["form"]["Pass"];
+       
+   if (username.value==""){  
+               window.alert("Username can't be blank");
+               name.focus();  
+               return false;
+   
+}
+
+  if (email.value==""){  
+               window.alert("Email can't be blank");
+               email.focus();  
+               return false;
+   
+}
+ if (password.value==""){  
+               window.alert("Password can't be blank");
+               Pass.focus();  
+               return false;
+   
+}
+               if (email != "" && password != "") {
+               inputSubscribe.focus();
+               window.alert("Thank you for subsribe us!");
+               return false;
+   
+}
+     return true;
+}
+</script>
+<style >  
+ body{
+         background-color: #FEF5ED;
+         display: flex;
+	 align-items: center;
+	 justify-content: center;
+	 min-height: 100vh;
+	 margin: 0;
+ }
+* {
+      box-sizing: border-box;
+}
+
+.container {
+	background-color: #fff;
+	border-radius: 5px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+	overflow: hidden;
+	width: 400px;
+	max-width: 100%;
+}
+.header {
+	border-bottom: 1px solid #f0f0f0;
+	background-color: #f7f7f7;
+	padding: 20px 40px;
+}
+
+.header h2 {
+	margin:0;
+        font-family: Garamond, serif;
+}
+
+.form {
+	padding: 30px 40px;	
+}
+.form-control {
+	margin-bottom: 10px;
+	padding-bottom: 10px;
+	position: relative;
+} 
+label{
+	display:block;
+    margin-top:10px;
+}
+input{
+	width:96%;
+    padding :10px;
+    border: 1px solid #797979;
+    font-size:20 px;
+}
+#inputSubscribe{
+    background-color: #E9C891;
+	border: 2px solid #E9C891;
+	border-radius: 4px;
+	color: black;
+	display: block;
+	font-family: Garamond, serif;
+	font-size: 20px;
+	padding: 10px;
+	margin-top: 20px;
+        margin-left: 75px;
+	width: 60%;
+}
+button{
+        background-color: #E9C891;
+	border: 2px solid #E9C891;
+	border-radius: 4px;
+	color: black;	
+	margin-left: 180px;
+	margin-bottom: 10px;
+	font-family: Garamond, serif;
+	font-size: 16px;
+}
+
+</style>
+</head>
+
+<body>
+  <div class="container">
+  <div class="header">
+		<h2><center>Subcribe us!</center></h2>
+  </div>
+	<form id="form" class="form" name ="form" action=""  method="post" onsubmit="return validateform()">
+		<div class="form-control">       
+           <label for="name">Username</label>
+           <br>
+	       <input type="text" placeholder="Username" id="username"/> 
+	    </div>
+        <div>
+           <label for="email">Email</label>
+           <br>
+	       <input type="email" id="email" placeholder="example@gmail.com"/>
+        </div>
+	    <div>
+	       <label for="Pass">Password</label>
+           <br>
+	       <input type="password" placeholder="Password" id="password"/>
+        </div>
+          <input id="inputSubscribe" type="Submit" value="Subsribe">
+   </form>
+<button onclick="window.location.href='WP(INDIVIDUAL).html';">Back</button>
+  <br> 
+ </div>  
+</body>
+</html>
